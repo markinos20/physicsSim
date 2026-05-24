@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gyömbér</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <header id="main">
+        <span id="title">Gyömber</span>
+        <img src="img/Firefox_wallpaper.png" id="Gyömbér">
+    </header>
+
+    <main>
+        <section id="content">
+            <nav id="menu">
+                <span id="sim">simulate</span>
+                <section id="selection-menu">
+                    <span id="n1">1</span>
+                    <span id="n2">2</span>
+                </section>
+            </nav>
+        </section>
+        <div id="game-wrapper">
+            <section id="game-section1">
+                <canvas id="Game" width="600" height="300"></canvas>
+                <div id="game-controls">
+                    <div class="control-group">
+                        <span id="grav">Gravity</span>
+                        <input type="range" id="gravitySlide" min="0" max="100" value="20">
+                    </div>
+                    <div class="control-group">
+                        <span id="bounce">Bounce</span>
+                        <input type="range" id="bounceSlide" min="0" max="100" value="80">
+                    </div>
+                    <div class="control-group">
+                        <span id="textCount">Ball count:</span>
+                        <span id="count">0</span>
+                    </div>
+                    <div id="game-buttons">
+                        <button id="trigGame"></button>
+                        <button id="clearGame"></button>
+                    </div>
+                </div>
+            </section>
+            <section id="game-section2">
+                <canvas id="Game1" width="600" height="300"></canvas>
+            </section>
+        </div>
+    </main>
+
+    <script src="project.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(235, 235, 235);
+    margin: 0;
+    padding: 0;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+body:hover { cursor: default; }
+
+/*top head*/
+#main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: rgb(75, 86, 192);
+    box-shadow: 0px 0px 10px grey;
+}
+
+#main:hover { cursor: default; }
+
+#title {
+    font-size: 35px;
+    color: rgb(233, 233, 233);
+}
+
+#Gyömbér {
+    height: 60px;
+    width: 60px;
+    border-radius: 5px;
+    transition: transform 0.75s, box-shadow 0.5s;
+    cursor: pointer;
+}
+
+#Gyömbér:hover {
+    transform: scale(1.1);
+}
+
+/*content*/
+#content {
+    margin-top: 70px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+/*navigation*/
+#menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#sim {
+    color: rgb(46, 54, 119);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#sim:hover {text-decoration: underline;}
+
+#selection-menu {
+    color: rgb(46, 54, 119);
+    font-size: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.25s, opacity 0.25s ease-in-out;
+}
+
+#n1,#n2 {
+    display: inline-block;
+    transition: text-shadow 0.5s, transform 0.5s ease-in-out;
+}
+
+#n1:hover,#n2:hover {
+    transform: scale(1.5);
+    text-shadow: 0px 0px 5px rgb(66, 66, 66);
+}
+
+/*game selection*/
+#game-wrapper {
+    display: grid;
+}
+
+#game-section1,#game-section2 {
+    grid-area: 1/1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s, visibility 0.15s ease-in-out;
+}
+
+/*control*/
+#game-controls {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgb(46, 54, 119);
+    font-size: 15px;
+}
+
+input[type="range"] {
+    accent-color: rgb(46, 54, 119);
+}
+
+/*buttons*/
+#game-buttons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+#trigGame,
+#clearGame {
+    width: 37.5px;
+    height: 37.5px;
+    border-radius: 25px;
+    border-width: 5px;
+    border-style: solid;
+    transition: transform 0.5s, background-color 0.5s, color 0.5s, border-color 0.5s, box-shadow 0.25s;
+    cursor: pointer;
+}
+
+#trigGame {
+    background-color: rgb(231, 231, 231);
+    border-color: lightblue;
+}
+
+#trigGame:hover {
+    transform: scale(1.175);
+    color: white;
+    box-shadow: 0px 0px 5px rgb(177, 177, 177);
+}
+
+#trigGame:active {
+    transform: scale(1);
+    transition: transform 0.25s;
+    background-color: rgb(201, 201, 201);
+    border-color: rgb(114, 200, 226);
+}
+
+#clearGame {
+    background-color: rgb(216, 69, 69);
+    border-color: rgb(163, 66, 66);
+}
+
+#clearGame:hover {
+    transform: scale(1.175);
+    color: white;
+    box-shadow: 0px 0px 5px rgb(177, 177, 177);
+}
+
+#clearGame:active {
+    transform: scale(1);
+    transition: transform 0.25s;
+    background-color: rgb(218, 126, 126);
+    border-color: rgb(116, 41, 41);
+}
+
+/*canvas*/
+#Game,#Game1 {
+    border: 5px solid rgb(133, 133, 133);
+    border-radius: 10px;
+    background-color: rgb(17, 17, 17);
+    box-shadow: 0px 0px 5px rgb(46, 46, 46);
+    max-width: 100%;
+}
+
